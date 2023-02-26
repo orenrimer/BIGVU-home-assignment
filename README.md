@@ -5,7 +5,7 @@ A serverless application that receives a website URL, takes a screenshot of the 
 \
 In addition, I have also uploaded the output file into an Amazon S3 bucket.
 ## Install
-Run the following command to install all dependencies:
+Run the following command inside the project folder to install all the dependencies:
 ```shell
 npm install
 ```
