@@ -32,7 +32,7 @@ exports.handler =  async(event, context, callback) => {
     // wait for output file to be created
     await createMP4();
 
-    // i have also uploaded the final result to a s3 bucket 
+    // I have also uploaded the final result to a s3 bucket 
     const fileContent = fs.readFileSync(settings.OUT_FILE);
     var params = {
         Bucket: process.env.BUCKET_NAME,
