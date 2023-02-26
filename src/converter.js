@@ -31,7 +31,6 @@ function convertToMp4() {
         await s3.upload(params).promise();
     })
     .run();
-    // return a path to the final product
 }
 
 
