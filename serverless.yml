@@ -36,3 +36,4 @@ functions:
           path: /
           method: post
           cors: true
+    timeout: 60

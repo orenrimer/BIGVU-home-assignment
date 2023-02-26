@@ -15,6 +15,7 @@ function createMP4(){
         .save(settings.OUT_FILE)
         .on('error',(err) => { reject(new Error(err)) })
         .on('end', () => { resolve() })
+        .run()
     })
 }
 
