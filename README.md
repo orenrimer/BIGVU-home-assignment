@@ -1,4 +1,4 @@
-# BIGVU-home-assignment
+# SCREEN RECORDER APPLICATION
 
 A serverless application that receives a website URL, takes a screenshot of the given website and creates a 10-second mp4 video with no sound displaying that screenshot. The app will store the created file locally and  return its url.
 \
