@@ -1,6 +1,6 @@
 'use strict';
 
-const playwright = require('playwright-aws-lambda');
+const { chromium } = require('playwright')
 const AWS = require("aws-sdk");
 const fs = require("fs");
 
@@ -22,7 +22,7 @@ exports.handler =  async(event, context, callback) => {
 
   try {
     // user playwright to take a screenshot of the given url
-    browser = await playwright.launchChromium();
+    browser = await chromium.launch();
     const page = await browser.newPage();
     await page.goto(data.url);
     
@@ -48,6 +48,7 @@ exports.handler =  async(event, context, callback) => {
       body: JSON.stringify({file: settings.OUT_FILE})
     }
   } catch (error) {
+    console.log(error);
     return {
       statusCode: 500,
       body: JSON.stringify({message : error})
